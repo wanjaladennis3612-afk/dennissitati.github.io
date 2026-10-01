@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dennis Sitati | Web Designer & Excel Specialist</title>
+<meta name="description" content="Dennis Sitati — professional web design, responsive websites and Excel solutions in Kenya.">
+<style>
+:root{--ink:#101827;--muted:#657187;--blue:#2878ff;--blue2:#6b5cff;--light:#f5f8ff;--line:#e5eaf2;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);background:#f8faff;line-height:1.65}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{max-width:1140px;margin:auto;padding:17px 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:22px;font-weight:900;letter-spacing:-.5px}.logo span{color:var(--blue)}
+nav a{color:#4d586b;text-decoration:none;margin-left:22px;font-weight:700;font-size:14px}
+nav a:hover{color:var(--blue)}
+.hero{position:relative;overflow:hidden;padding:105px 24px 95px;background:linear-gradient(135deg,#eef5ff 0%,#fff 52%,#f0edff 100%)}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(2px);opacity:.55}
+.hero:before{width:300px;height:300px;background:#bcd6ff;right:-90px;top:-80px}.hero:after{width:230px;height:230px;background:#d6ceff;left:-90px;bottom:-80px}
+.wrap{max-width:1140px;margin:auto;position:relative;z-index:2}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:60px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;background:#fff;border:1px solid #dce7fb;color:var(--blue);font-weight:800;font-size:12px;letter-spacing:1.1px;text-transform:uppercase;box-shadow:0 7px 25px rgba(40,120,255,.08)}
+.badge i{width:7px;height:7px;border-radius:50%;background:#2dcc7a}
+h1{font-size:58px;line-height:1.02;letter-spacing:-2px;margin:18px 0 22px}
+.gradient{background:linear-gradient(90deg,var(--blue),var(--blue2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:19px;color:var(--muted);max-width:670px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;margin-top:29px;padding:14px 22px;border-radius:10px;background:linear-gradient(135deg,var(--blue),#4d65ff);color:#fff;text-decoration:none;font-weight:800;box-shadow:0 12px 25px rgba(40,120,255,.2);border:0;cursor:pointer}
+.btn.light{background:#fff;color:var(--blue);border:1px solid #d7e2f4;box-shadow:none}
+.profile{background:linear-gradient(145deg,#101827,#1c2942);color:#fff;border-radius:28px;padding:34px;box-shadow:0 30px 70px rgba(16,24,39,.22);position:relative;overflow:hidden}
+.profile:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;background:rgba(40,120,255,.28);right:-70px;top:-70px}
+.avatar{width:92px;height:92px;border-radius:24px;background:linear-gradient(135deg,var(--blue),var(--blue2));display:flex;align-items:center;justify-content:center;font-size:31px;font-weight:900;margin-bottom:24px;position:relative;z-index:2}
+.profile h2{font-size:30px;position:relative;z-index:2}.profile .role{color:#bfc9da;margin-top:4px;position:relative;z-index:2}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:23px;position:relative;z-index:2}.tag{padding:7px 10px;border-radius:8px;background:rgba(255,255,255,.08);font-size:12px;color:#dbe3ef}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px;position:relative;z-index:2}.stat{padding:13px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);border-radius:11px}.stat b{display:block;font-size:18px}.stat span{font-size:11px;color:#aeb9ca}
+section{padding:88px 24px}.head{text-align:center;max-width:720px;margin:0 auto 48px}.head .eyebrow{color:var(--blue);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:1.5px}.head h2{font-size:39px;line-height:1.15;margin:8px 0 12px}.muted{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:31px;box-shadow:0 12px 35px rgba(16,24,39,.055);transition:.2s}.card:hover{transform:translateY(-5px);box-shadow:0 18px 42px rgba(16,24,39,.09)}
+.icon{width:52px;height:52px;border-radius:14px;background:var(--light);display:flex;align-items:center;justify-content:center;font-size:25px;margin-bottom:16px}.card h3{font-size:20px;margin-bottom:8px}
+.about{background:#fff}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.points{margin-top:22px;display:grid;gap:12px}.point{display:flex;gap:12px;align-items:flex-start}.tick{width:25px;height:25px;border-radius:50%;background:#e9f7f0;color:#15965a;display:flex;align-items:center;justify-content:center;font-weight:900;flex:none}
+.visual{border-radius:25px;padding:30px;background:linear-gradient(145deg,#eef5ff,#f4f0ff);border:1px solid #dce5f5}.browser{background:#fff;border:1px solid #dfe6f0;border-radius:16px;overflow:hidden;box-shadow:0 20px 40px rgba(30,50,90,.12)}.browser-top{padding:11px 14px;border-bottom:1px solid #edf0f5}.dots span{display:inline-block;width:8px;height:8px;border-radius:50%;background:#c9d1de;margin-right:5px}.browser-body{padding:24px}.fake-line{height:10px;border-radius:10px;background:#e9eef6;margin:10px 0}.fake-line.big{height:20px;width:72%}.fake-line.mid{width:55%}.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:18px}.mini{height:65px;background:#f2f6fc;border-radius:9px}
+.portfolio-card{padding:0;overflow:hidden}.project-cover{height:180px;background:linear-gradient(135deg,#101827,#2878ff);color:#fff;padding:27px;display:flex;flex-direction:column;justify-content:end}.project-cover.p2{background:linear-gradient(135deg,#25204a,#6b5cff)}.project-cover.p3{background:linear-gradient(135deg,#123c35,#15965a)}.project-cover small{opacity:.75}.project-body{padding:25px}.project-body p{color:var(--muted)}
+.contact{background:linear-gradient(135deg,#eef5ff,#f3f0ff)}.contact-box{background:#fff;border:1px solid var(--line);border-radius:22px;padding:42px;display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;box-shadow:0 18px 45px rgba(16,24,39,.07)}
+.contact-info h3{font-size:29px}.contact-item{margin-top:20px}.contact-item b{display:block;font-size:12px;color:var(--blue);text-transform:uppercase;letter-spacing:1px}.contact-item a{color:var(--ink);text-decoration:none}
+form input,form textarea{width:100%;padding:14px 15px;margin-bottom:14px;border:1px solid #dbe2ed;border-radius:10px;font:inherit;outline:none}form input:focus,form textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(40,120,255,.1)}textarea{height:135px;resize:vertical}
+footer{background:#101827;color:#aeb9ca;text-align:center;padding:32px 24px}.footer-name{color:#fff;font-weight:800}
+@media(max-width:850px){.hero-grid,.about-grid,.contact-box{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.hero{padding-top:70px}h1{font-size:44px}.nav{padding:15px 18px}nav a{margin-left:10px;font-size:12px}.stats{grid-template-columns:1fr 1fr 1fr}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="logo">Dennis <span>Sitati.</span></div><nav><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div></header>
+
+<section class="hero">
+<div class="wrap hero-grid">
+<div>
+<div class="badge"><i></i> Available for freelance projects</div>
+<h1>Websites that look <span class="gradient">professional.</span> Results that matter.</h1>
+<p>I’m Dennis Sitati, a web designer and Excel specialist helping businesses, entrepreneurs and individuals build a stronger digital presence with clean, responsive websites and practical business solutions.</p>
+<div class="actions"><a class="btn" href="#portfolio">Explore My Work</a><a class="btn light" href="#contact">Let's Work Together</a></div>
+</div>
+<div class="profile">
+<div class="avatar">DS</div><h2>Dennis Sitati</h2><div class="role">Web Designer & Excel Specialist</div>
+<div class="tags"><span class="tag">Web Design</span><span class="tag">HTML & CSS</span><span class="tag">Responsive Design</span><span class="tag">Excel</span></div>
+<div class="stats"><div class="stat"><b>Web</b><span>Design</span></div><div class="stat"><b>Mobile</b><span>Friendly</span></div><div class="stat"><b>Excel</b><span>Solutions</span></div></div>
+</div>
+</div>
+</section>
+
+<section id="services"><div class="wrap"><div class="head"><div class="eyebrow">What I do</div><h2>Digital solutions built around your goals.</h2><p class="muted">Professional work with a focus on clarity, usability and a strong visual presentation.</p></div>
+<div class="grid">
+<div class="card"><div class="icon">🌐</div><h3>Website Design</h3><p class="muted">Modern business websites with clean layouts, clear navigation and professional presentation.</p></div>
+<div class="card"><div class="icon">📱</div><h3>Responsive Design</h3><p class="muted">Websites that look and work smoothly across phones, tablets and desktop computers.</p></div>
+<div class="card"><div class="icon">📊</div><h3>Excel Solutions</h3><p class="muted">Organized spreadsheets for records, calculations, data entry and simple business reporting.</p></div>
+</div></div></section>
+
+<section id="portfolio" class="about"><div class="wrap"><div class="head"><div class="eyebrow">Selected work</div><h2>Portfolio projects</h2><p class="muted">Sample projects created to demonstrate my design and technical skills.</p></div>
+<div class="grid">
+<div class="card portfolio-card"><div class="project-cover"><small>01 • WEB DESIGN</small><h3>Professional Business Website</h3></div><div class="project-body"><p>Responsive business website with services, about, contact and strong calls to action.</p></div></div>
+<div class="card portfolio-card"><div class="project-cover p2"><small>02 • LANDING PAGE</small><h3>Modern Landing Page</h3></div><div class="project-body"><p>Clean, conversion-focused landing page concept designed for mobile and desktop.</p></div></div>
+<div class="card portfolio-card"><div class="project-cover p3"><small>03 • EXCEL</small><h3>Business Records Tracker</h3></div><div class="project-body"><p>Structured Excel concept for tracking income, expenses and business information.</p></div></div>
+</div></div></section>
+
+<section id="about"><div class="wrap about-grid"><div><div class="head" style="text-align:left;margin:0 0 20px"><div class="eyebrow">About me</div><h2>Simple solutions. Professional results.</h2></div><p class="muted">I enjoy turning ideas into clean digital experiences that are practical and easy to use. I work with clients to understand what they need and create solutions that fit their goals.</p><div class="points"><div class="point"><span class="tick">✓</span><div><b>Professional design</b><p class="muted">Clean layouts and modern presentation.</p></div></div><div class="point"><span class="tick">✓</span><div><b>Mobile-friendly</b><p class="muted">Designed for different screen sizes.</p></div></div><div class="point"><span class="tick">✓</span><div><b>Clear communication</b><p class="muted">Focused on understanding your project.</p></div></div></div></div>
+<div class="visual"><div class="browser"><div class="browser-top"><div class="dots"><span></span><span></span><span></span></div></div><div class="browser-body"><div class="fake-line big"></div><div class="fake-line mid"></div><div class="fake-line"></div><div class="mini-grid"><div class="mini"></div><div class="mini"></div><div class="mini"></div></div></div></div></div></div></section>
+
+<section class="contact" id="contact"><div class="wrap"><div class="head"><div class="eyebrow">Get in touch</div><h2>Have a project in mind?</h2><p class="muted">Let's discuss your website or Excel project.</p></div>
+<div class="contact-box"><div class="contact-info"><h3>Let's build something useful.</h3><p class="muted" style="margin-top:10px">You can contact me directly or use the form to tell me about your project.</p>
+<div class="contact-item"><b>Phone</b><a href="tel:+254718071848">0718071848</a></div>
+<div class="contact-item"><b>Email</b><a href="mailto:wanjaladennis3612@gmail.com">wanjaladennis3612@gmail.com</a></div>
+<div class="contact-item"><b>Location</b><span>Kenya</span></div></div>
+<form action="mailto:wanjaladennis3612@gmail.com" method="post" enctype="text/plain"><input name="name" placeholder="Your name" required><input name="email" type="email" placeholder="Your email" required><textarea name="message" placeholder="Tell me about your project" required></textarea><button class="btn" type="submit">Send Project Inquiry</button></form>
+</div></div></section>
+
+<footer><p>© 2026 <span class="footer-name">Dennis Sitati</span>. Web Design & Excel Solutions.</p></footer>
+</body>
+</html>
